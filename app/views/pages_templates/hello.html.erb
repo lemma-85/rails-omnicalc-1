@@ -1,0 +1,16 @@
+<h1>Form experiments</h1>
+
+<% if @first_name.present? && @last_name.present? %>
+  <p>Hello, <%= @first_name %> <%= @last_name %>!</p>
+<% end %>
+
+<form action="/goodbye" method="get">
+  <label for="alice">First name</label>
+  <input id="alice" type="text" name="zebra">
+
+  <label for="bob">Last name</label>
+  <input id="bob" type="text" name="giraffe">
+
+  <button>Go to /goodbye</button>
+</form>
+
